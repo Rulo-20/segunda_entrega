@@ -1,0 +1,167 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100%;
+    animation: color;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes color{
+ 0%{background: rgb(168, 228, 236)};
+ 50%{background: rgb(103, 174, 192)};
+ 100%{background: rgb(250, 250, 250)};
+}
+
+
+li{
+    list-style: none;
+}
+a{
+    display:inline-block;
+    font-size: 13px;
+    text-decoration: none;
+    list-style: none;
+    color: rgb(10, 10, 10);
+    width: 18%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 10px;
+}
+
+a:hover{
+    background: rgb(255, 255, 255);
+    font-size: 18px;
+    width: 200px;
+    text-align: center;
+}
+
+.conteiner > *{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0, 0.75) ;
+    border-radius:4px ;
+    padding: 10px;
+    text-align: center;
+}
+.header{
+    grid-area: header;
+}
+.main{
+    grid-area: main;
+}
+.fooder{
+    grid-area: fooder;
+}
+.conteiner{
+    display: grid;
+    gap: 8px;
+    grid-template-areas: 
+    "header"
+    "main"
+    "fooder";
+}
+#img1{
+    width: 100%;
+    height: 100%;
+}
+#main_1{
+background-image: url(../full_responsive/img/img_geomatica.jpg);
+background-size: 100vw 100vh;
+
+}
+
+#descripcion{
+    display: inline-block;
+    background-color: rgba(250, 248, 248, 0);
+    position: absolute;
+    height: 30%;
+    width: 20%;
+    top:120px;
+    right: 0px;
+    left: 200px;
+}
+
+#texto{
+    color: aliceblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+}
+
+#logo{
+    contain: layout inline-size;
+    display:inline-block;
+    background-color: rgb(191, 216, 201);
+    position: absolute;
+    height: 30%;
+    width: 50%;
+    top:90px;
+    left: 490px;
+    right:25px ;
+}
+
+form{
+  width:450px;
+  margin: auto;
+  background: rgba(0,0,0, 0.4);
+  padding: 10px 20px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  border-radius: 7px;
+}
+h2{
+    color: #fff;
+    text-align: center;
+    margin: 0px;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+input{
+    width: 100px;
+    margin-bottom: 20px;
+    padding: 7px;
+
+}
+
+@media only screen and (max-width:700px){
+    a{
+        display: flex;
+        text-align:center;
+        align-items: center;       
+        justify-content: center;
+        font-size: 13px;
+        text-decoration: none;
+        list-style: none;
+        color: rgb(8, 8, 8);
+        width: 18%;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        margin-top: 10px;
+        margin-left: 40%;
+    }
+ 
+    #texto{
+        color: rgb(7, 7, 7);
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 10px;
+        margin-left: 5px;
+        margin-top: 75px;
+        direction: row;
+    }
+    
+    #logo{
+    
+        background-color: rgb(191, 216, 201);
+        position: absolute;
+        height: 15%;
+        width: 30%;
+        top:380px;
+        left: 180px;
+        right:25px ;
+    }
+}
+@media only screen and (min-width:500px){}
+
